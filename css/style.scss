@@ -1,7 +1,7 @@
 //root n stuffs
 :root{
-    --emperor: #534a4b;
-    --brown: #cc876e;
+    --emperor: #616161;
+    --brown: #618bb3;
     --transition: all 0.5s ease-in-out;
 }
 
@@ -57,16 +57,18 @@ button{
 }
 .navbar{
     display: flex;
+    background: #616161;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 0;
-    border-bottom: 1.5px solid #fff;
+    border-bottom: 1.5px solid #000;
 }
 .navbar-brand{
+    padding: 30px;
     font-size: 1.2rem;
     font-weight: 800;
-    color: #fff;
+    color: #000;
 }
 .navbar-toggler{
     z-index: 1000;
@@ -88,8 +90,8 @@ button{
     position: absolute;
     top: 0;
     right: 0;
-    background: #000;
-    height: 100%;
+    background: var(--emperor);
+    height: 70%;
     width: 0;
     overflow: hidden;
     transition: var(--transition);
@@ -105,6 +107,9 @@ button{
     letter-spacing: 1.3rem;
     font-size: 1.3rem;
     transition: var(--transition);
+    i{
+        font-size: 25px;
+    }
 }
 .nav-link:hover{
     text-shadow: 0 0 4px #fff;
@@ -121,6 +126,40 @@ button{
 }
 /**********************/
 
+//footer
+.footer{
+    text-align: center;
+    background: #616161;
+}
+.footer-wrapper{
+    padding: 5rem 0;
+    div{
+        margin: 2.5rem 0;
+    }
+}
+.footer-links li{
+    margin: 0.6rem 0;
+    a{
+        text-transform: uppercase;
+        font-weight: 200;
+        opacity: 0.9;
+        color: #f1f1f1;
+        transition: var(--transition);
+    }
+}
+.footer-links li a:hover{
+    color: var(--brown);
+}
+.footer-text{
+    padding: 1.7rem 0;
+}
+
+
+
+
+
+
+
 /* media queries */
 
 @media screen and (min-width: 500px){
@@ -130,7 +169,7 @@ button{
     .nav-icons{
         display: flex;
         span{
-            color: #fff;
+            color: #000;
             font-size: 1.3rem;
             padding: 0.5rem 1rem;
             cursor: pointer;
@@ -148,5 +187,79 @@ button{
     }
     .nav-btns{
         display: flex;
+        button{
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 300;
+            opacity: 0.9;
+            padding: 0.4rem 0;
+            border-width: 0.5px;
+            border-style: solid;
+            margin: 0 0.5rem;
+            width: 100px;
+            transition: var(--transition);
+        }
+        button:hover{
+            opacity: 1;
+        }
+        button:first-child{
+            border-color: var(--emperor);
+            background: var(--emperor);
+            color: #000;
+        }
+        button:first-child:hover{
+            border-color: #000;
+            background: transparent;
+        }
+        button:last-child{
+            border-color: #000;
+            background: transparent;
+            color: #000;
+        }
+        button:last-child:hover{
+            border-color: var(--emperor);
+            background: var(--emperor);
+        }
     }
+    .navbar-extra-content{
+        flex: 1 0 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    .navbar-collapse{
+        position: relative;
+        width: 100%;
+        background: transparent;
+        flex: 0 0 40%;
+    }
+    .navbar-nav{
+        display: flex;
+        margin: 0!important;
+    }
+    .nav-item{
+        padding: 0;
+        margin: 0 0.8rem;
+    }
+    .nav-link{ 
+        margin: 0 2rem;
+        font-size: 1rem;
+        letter-spacing: normal;
+        text-transform: capitalize;
+        color: #000;
+    }
+    .nav-link:hover{
+        text-shadow: none;
+        color: var(--brown);
+    }
+
+}
+
+
+
+//stopping anim n transition
+.resize-animation-stopper *{
+    animation: none!important;
+    transition: none!important;
 }
