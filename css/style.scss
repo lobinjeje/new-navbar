@@ -1,0 +1,152 @@
+//root n stuffs
+:root{
+    --emperor: #534a4b;
+    --brown: #cc876e;
+    --transition: all 0.5s ease-in-out;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+
+body{
+    line-height: 1.5;
+    position: relative;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+ul li{
+    list-style-type: none;
+}
+button{
+    outline: 0;
+    cursor: pointer;
+}
+.container{
+    width: 90vw;
+    margin: 0 auto;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    margin: 0.6rem 0;
+    color: #e0e0e0;
+    font-weight: 200;
+    word-spacing: 2px;
+}
+//header
+.header{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    border-bottom: 1.5px solid #fff;
+}
+.navbar-brand{
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #fff;
+}
+.navbar-toggler{
+    z-index: 1000;
+    padding: 0.2rem 0.4rem;
+    font-size: 1.6rem;
+    border: none;
+    background: none;
+    color: #000;
+    transition: var(--transition);
+}
+.navbar-toggler:hover{
+    color: var(--brown);
+}
+.nav-btns, .nav-icons{
+    display: none;
+}
+.navbar-collapse{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.nav-item{
+    margin: 0.7rem 0;
+    padding: 1rem 0;
+    text-align: center;
+}
+.nav-link{
+    color: var(--brown);
+    text-transform: uppercase;
+    letter-spacing: 1.3rem;
+    font-size: 1.3rem;
+    transition: var(--transition);
+}
+.nav-link:hover{
+    text-shadow: 0 0 4px #fff;
+}
+.navbar-nav{
+    margin-top: 7rem!important;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+/**********************/
+.showNav{
+    width: 100%;
+}
+/**********************/
+
+/* media queries */
+
+@media screen and (min-width: 500px){
+    .navbar-brand{
+        font-size: 1.5rem;
+    }
+    .nav-icons{
+        display: flex;
+        span{
+            color: #fff;
+            font-size: 1.3rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        span:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+@media screen and (min-width: 992px){
+    .navbar-toggler{
+        display: none;
+    }
+    .nav-btns{
+        display: flex;
+    }
+}
