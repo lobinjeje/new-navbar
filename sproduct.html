@@ -22,8 +22,41 @@
 
     <div id="header"></div>
 
-    <main class="main">
-        <h2>asd</h2>
+    <main>
+        
+        <img id=featured src="images/jordan1chicago1.jpg">
+
+        <img class="thumbnail active" src="images/jordan1chicago1.jpg">
+        <img class="thumbnail" src="images/jordan1chicago2.jpeg">
+        <img class="thumbnail" src="images/jordan1chicago3.jpeg">
+        <img class="thumbnail" src="images/jordan1chicago4.jpeg">
+
+
+        <script type="text/javascript">
+
+
+            let thumbnails = document.getElementsByClassName('thumbnail')
+
+            let activeImages = document.getElementsByClassName('active')
+
+            for(var i=0; i < thumbnails.length; i++){
+
+                thumbnails[i].addEventListener('mouseover', function(){
+                    
+                     if(activeImages.length > 0){
+                        activeImages[0].classList.remove('active')
+                    }
+
+
+                    this.classList.add('active')
+                    document.getElementById('featured').src = this.src
+                })
+            }
+        
+        
+        
+        </script>
+
     </main>
 
     <div id="footer"></div>

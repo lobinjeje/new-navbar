@@ -50,6 +50,34 @@ button {
   word-spacing: 2px;
 }
 
+#featured {
+  max-width: 500px;
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.thumbnail {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 180px;
+  max-height: 100px;
+  cursor: pointer;
+  opacity: 0.5;
+  margin: 5px;
+  border: 2px solid black;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+}
+
 .header {
   min-height: 30vh;
   display: -webkit-box;
