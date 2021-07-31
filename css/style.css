@@ -78,6 +78,41 @@ button {
   opacity: 1;
 }
 
+#slide-wrapper {
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#slider {
+  width: 440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.arrow:hover {
+  opacity: .5;
+  width: 35px;
+  height: 35px;
+}
+
 .header {
   min-height: 30vh;
   display: -webkit-box;

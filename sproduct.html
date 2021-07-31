@@ -24,13 +24,19 @@
 
     <main>
         
-        <img id=featured src="images/jordan1chicago1.jpg">
+            <img id=featured src="images/jordan1chicago1.jpg">
 
-        <img class="thumbnail active" src="images/jordan1chicago1.jpg">
-        <img class="thumbnail" src="images/jordan1chicago2.jpeg">
-        <img class="thumbnail" src="images/jordan1chicago3.jpeg">
-        <img class="thumbnail" src="images/jordan1chicago4.jpeg">
 
+        <div id="slide-wrapper">
+            <img id="slideLeft" class="arrow" src="images/arrow-left.png">
+            <div id="slider">
+                <img class="thumbnail active" src="images/jordan1chicago1.jpg">
+                <img class="thumbnail" src="images/jordan1chicago2.jpeg">
+                <img class="thumbnail" src="images/jordan1chicago3.jpeg">
+                <img class="thumbnail" src="images/jordan1chicago4.jpeg">
+            </div>
+            <img id="slideRight" class="arrow" src="images/arrow-right.png">
+        </div>
 
         <script type="text/javascript">
 
@@ -42,7 +48,7 @@
             for(var i=0; i < thumbnails.length; i++){
 
                 thumbnails[i].addEventListener('mouseover', function(){
-                    
+
                      if(activeImages.length > 0){
                         activeImages[0].classList.remove('active')
                     }
@@ -52,6 +58,17 @@
                     document.getElementById('featured').src = this.src
                 })
             }
+        
+            let buttonRight = document.getElementById('slideRight');
+            let buttonLeft = document.getElementById('slideLeft');
+
+            buttonLeft.addEventListener('click', function(){
+                document.getElementById('slider').scrollLeft -= 180
+            })
+
+            buttonRight.addEventListener('click', function(){
+                document.getElementById('slider').scrollLeft += 180
+            })
         
         
         
